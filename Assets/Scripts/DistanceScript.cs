@@ -52,6 +52,6 @@ public class DistanceScript : MonoBehaviour {
     {
         GUI.Box(new Rect(Screen.width / 10 * 2, Screen.height / 20 * 18, Screen.width / 10 * 6, Screen.height / 20), "", buttonLayout.customStyles[2]);
         GUI.DrawTexture(new Rect(Screen.width / 10 * 2 + (Screen.width / 10 * 6) * (1 - distance/startDistance) - arrowSizeX/2, Screen.height / 20 * 18, arrowSizeX, arrowSizeY), arrowTexture);
-        GUI.TextField(new Rect(Screen.width / 10 * 4, Screen.height / 20 * 18, Screen.width / 5, Screen.height / 10), Mathf.RoundToInt(distance).ToString(),buttonLayout.customStyles[3]);
+        GUI.TextField(new Rect(Screen.width / 10 * 4, Screen.height / 20 * 18, Screen.width / 5, Screen.height / 10), distance.ToString("0.00") + " λ", buttonLayout.customStyles[3]);
     }
 }
