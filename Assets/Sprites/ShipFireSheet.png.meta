@@ -1,9 +1,11 @@
 fileFormatVersion: 2
-guid: 4f7093b67bdcf3b40abf182bc9ceabb0
-timeCreated: 1501342261
+guid: 9931f3b8f909dc04da635f78226dc458
+timeCreated: 1501352716
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: ShipFireSheet_0
+    21300002: ShipFireSheet_1
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -30,21 +32,21 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
-    wrapV: -1
-    wrapW: -1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 33, y: 0, z: 32, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -73,7 +75,35 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ShipFireSheet_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 226
+        width: 83
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ShipFireSheet_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 59
+        width: 86
+        height: 149
+      alignment: 9
+      pivot: {x: 0.49999997, y: 0.6422577}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
