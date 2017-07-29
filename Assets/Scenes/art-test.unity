@@ -1534,8 +1534,9 @@ MonoBehaviour:
   distance: 10000
   isMoving: 1
   buttonLayout: {fileID: 11400000, guid: 8045e9eca10cb254a95707c333e6d5a0, type: 2}
-  arrowTexture: {fileID: 2800000, guid: 9a047f20809ac2844b91bec6cb9a8988, type: 3}
-  arrowSize: 50
+  arrowTexture: {fileID: 2800000, guid: 4316bf967bc52f846b45d99753e5c72d, type: 3}
+  arrowSizeX: 45
+  arrowSizeY: 40
 --- !u!114 &1734310334
 MonoBehaviour:
   m_ObjectHideFlags: 0
