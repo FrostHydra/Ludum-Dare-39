@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DistanceScript : MonoBehaviour {
 
-    public float speed;
+    private float speed;
     public float distance;
     private float startDistance;
     public bool isMoving;
@@ -21,6 +21,8 @@ public class DistanceScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+        speed = ShipStats.Instance.velocity;
         if (isMoving && distance > 0)
         {
             distance -= (speed * Time.deltaTime);

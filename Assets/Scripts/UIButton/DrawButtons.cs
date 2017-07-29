@@ -22,9 +22,9 @@ public class DrawButtons : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        for(int i = 0; i < systemButtons.Length; i++)
+        for (int i = 0; i < systemButtons.Length; i++)
         {
-            systemButtons[i].shipSystem.isPowered = false;
+            systemButtons[i].shipSystem.setPowered(false);
         }
 	}
 
@@ -33,7 +33,7 @@ public class DrawButtons : MonoBehaviour {
         for (int i = 0; i < systemButtons.Length; i++)
         {
             int buttonStyle = 1;
-            if (systemButtons[i].shipSystem.isPowered)
+            if (systemButtons[i].shipSystem.IsPowered)
             {
                 buttonStyle = 0;
             }
@@ -41,8 +41,8 @@ public class DrawButtons : MonoBehaviour {
                 Screen.width / 20, (Screen.height / (systemButtons.Length + 2)) * (i + 1),
                 Screen.width / 6, Screen.height / (systemButtons.Length + 2)), systemButtons[i].name, buttonLayout.customStyles[buttonStyle]))
             {
-                systemButtons[i].shipSystem.isPowered = !systemButtons[i].shipSystem.isPowered;
-                if (systemButtons[i].shipSystem.isPowered)
+                systemButtons[i].shipSystem.setPowered( !systemButtons[i].shipSystem.IsPowered );
+                if (systemButtons[i].shipSystem.IsPowered)
                 {
                     
                 }

@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class PoweredSystem : MonoBehaviour {
 
-    public bool isPowered = false;
+
+    private bool isPowered = false;
+
+    public bool IsPowered
+    {
+        get { return isPowered;  }
+    }
+
     public float drainCost = 1.0f;
     private Battery battery;
 
@@ -19,16 +26,15 @@ public class PoweredSystem : MonoBehaviour {
         {
             battery.drainPower(drainCost * Time.deltaTime);
         }
-
-        //
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TogglePower();
-        }
+        
     }
 
-    public void TogglePower()
+    public void setPowered(bool power)
     {
-        isPowered = !isPowered;
+        isPowered = power;
+        //fire event
+        if (power)
+        Debug.Log("power");
+        gameObject.SendMessage("powerSystem", isPowered, SendMessageOptions.DontRequireReceiver);
     }
 }
