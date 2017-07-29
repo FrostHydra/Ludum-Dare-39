@@ -3,35 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
+public class SystemButton
+{
+    public string name;
+    //public bool isPowered;
+    public PoweredSystem shipSystem;
+
+}
+
 public class DrawButtons : MonoBehaviour {
 
     public GUISkin buttonLayout;
-    public string[] buttonName;
-    public bool[] buttonOn;
+    //public string[] buttonName;
+    //public bool[] buttonOn;
+    public SystemButton[] systemButtons;
 
 
 	// Use this for initialization
 	void Start () {
-        buttonOn = new bool[buttonName.Length];
-        for(int i = 0; i < buttonOn.Length; i++)
+        for(int i = 0; i < systemButtons.Length; i++)
         {
-            buttonOn[i] = false;
+            systemButtons[i].shipSystem.isPowered = false;
         }
 	}
 
     private void OnGUI()
     {
-        for (int i = 0; i < buttonName.Length; i++)
+        for (int i = 0; i < systemButtons.Length; i++)
         {
             int buttonStyle = 1;
-            if (buttonOn[i])
+            if (systemButtons[i].shipSystem.isPowered)
             {
                 buttonStyle = 0;
             }
-            if (GUI.Button(new Rect(Screen.width / 20, (Screen.height / (buttonName.Length + 2)) * (i + 1), Screen.width / 6, Screen.height / (buttonName.Length + 2)), buttonName[i], buttonLayout.customStyles[buttonStyle]))
+            if (GUI.Button(new Rect(
+                Screen.width / 20, (Screen.height / (systemButtons.Length + 2)) * (i + 1),
+                Screen.width / 6, Screen.height / (systemButtons.Length + 2)), systemButtons[i].name, buttonLayout.customStyles[buttonStyle]))
             {
-                buttonOn[i] = !buttonOn[i];
-                if (buttonOn[i])
+                systemButtons[i].shipSystem.isPowered = !systemButtons[i].shipSystem.isPowered;
+                if (systemButtons[i].shipSystem.isPowered)
                 {
                     
                 }
