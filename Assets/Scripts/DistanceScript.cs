@@ -11,7 +11,8 @@ public class DistanceScript : MonoBehaviour {
 
     public GUISkin buttonLayout;
     public Texture arrowTexture;
-    public int arrowSize;
+    public int arrowSizeX;
+    public int arrowSizeY;
 
     void Start()
     {
@@ -50,6 +51,7 @@ public class DistanceScript : MonoBehaviour {
     public void OnGUI()
     {
         GUI.Box(new Rect(Screen.width / 10 * 2, Screen.height / 20 * 18, Screen.width / 10 * 6, Screen.height / 20), "", buttonLayout.customStyles[2]);
-        GUI.DrawTexture(new Rect(Screen.width / 10 * 2 + (Screen.width / 10 * 6) * (1 - distance/startDistance) - arrowSize/2, Screen.height / 20 * 18, arrowSize, arrowSize), arrowTexture);
+        GUI.DrawTexture(new Rect(Screen.width / 10 * 2 + (Screen.width / 10 * 6) * (1 - distance/startDistance) - arrowSizeX/2, Screen.height / 20 * 18, arrowSizeX, arrowSizeY), arrowTexture);
+        GUI.TextField(new Rect(Screen.width / 10 * 4, Screen.height / 20 * 18, Screen.width / 5, Screen.height / 10), Mathf.RoundToInt(distance).ToString(),buttonLayout.customStyles[3]);
     }
 }

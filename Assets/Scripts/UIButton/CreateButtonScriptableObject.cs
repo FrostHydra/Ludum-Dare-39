@@ -11,7 +11,7 @@ public class CreateButtonScriptableObject {
     {
         ButtonLayout button = new ButtonLayout();
 
-        string path = "Assets/Prefabs/button.asset";
+        string path = "Assets/ScriptableObjects/button.asset";
         path = AssetDatabase.GenerateUniqueAssetPath(path);
         AssetDatabase.CreateAsset(button, path);
         AssetDatabase.SaveAssets();
