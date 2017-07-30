@@ -6,8 +6,9 @@ public class Spawner : MonoBehaviour
 {
 
     public GameObject[] asteroidPrefab;
-    public float spawntime;
     public float asteroidSpeed = 5.0f;
+
+    public List<AsteroidEvent> events;
 
 
     void Update()
