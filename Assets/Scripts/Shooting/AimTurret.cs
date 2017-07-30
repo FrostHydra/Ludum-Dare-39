@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class AimTurret : MonoBehaviour {
 
+    public float rotationSpeed = 0.2f;
     [Range(-10, 10)]
     public float depth;
 
     public float minAngle = -90f, maxAngle = 90f;
 
+
     private bool isPowered;
     private Quaternion targetRot;
+    private Quaternion startingRot;
 
     private void Start()
     {
-        targetRot = transform.rotation;
+        startingRot = transform.rotation;
+        targetRot = startingRot;
     }
 
     void Update () {
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, 0.5f);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, rotationSpeed);
 
         if (!isPowered) { return; }
 
@@ -35,7 +39,13 @@ public class AimTurret : MonoBehaviour {
         {
             if (rot_z > maxAngle && rot_z < minAngle)
             {
-                rot_z = minAngle;
+                if (Mathf.Abs(rot_z - maxAngle) > Mathf.Abs(rot_z - minAngle))
+                {
+                    rot_z = minAngle;
+                } else
+                {
+                    rot_z = maxAngle;
+                }
             }
 
         } else
@@ -51,5 +61,10 @@ public class AimTurret : MonoBehaviour {
     public void powerSystem(bool power)
     {
         isPowered = power;
+
+        if (!power)
+        {
+            targetRot = startingRot;
+        }
     }
 }
