@@ -29,4 +29,9 @@ public class ShipStats : GenericSingletonClass<ShipStats>
     {
         health += heal;
     }
+
+    public float GetVelocity()
+    {
+        return velocity;
+    }
 }
