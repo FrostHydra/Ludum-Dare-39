@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c88cb76a4f0c84285f6598e0fa175c, type: 3}
   m_Name: TestEvent
   m_EditorClassIdentifier: 
-  triggerDistance: 0
-  asteroidAmount: 1
-  spawnDelay: 1
+  triggerDistance: 80
+  asteroidAmount: 5
+  spawnDelay: 2

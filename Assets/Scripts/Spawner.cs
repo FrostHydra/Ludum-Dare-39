@@ -9,14 +9,33 @@ public class Spawner : MonoBehaviour
     public float asteroidSpeed = 5.0f;
 
     public List<AsteroidEvent> events;
+    private DistanceScript distance;
 
+    private void Awake()
+    {
+        distance = FindObjectOfType<DistanceScript>();
+    }
 
     void Update()
     {
-        // Asteroid event
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        for (int i = 0; i < events.Count; i++)
+        {
+            if (distance.distance < events[i].triggerDistance)
+            {
+                StartCoroutine(SpawnEvent(events[i]));
+                events.Remove(events[i]);
+            }
+        }
+    }
+
+    IEnumerator SpawnEvent(AsteroidEvent wave)
+    {
+        for (int i = 0; i < wave.asteroidAmount; i++)
         {
             Spawn();
+
+            yield return new WaitForSeconds(wave.spawnDelay); 
         }
     }
 
