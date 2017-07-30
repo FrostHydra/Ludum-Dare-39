@@ -644,7 +644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588144dafb4442849a00369db49394d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrusterVolocity: 5
+  thrusterScalar: 2
 --- !u!114 &114178214104381624
 MonoBehaviour:
   m_ObjectHideFlags: 1

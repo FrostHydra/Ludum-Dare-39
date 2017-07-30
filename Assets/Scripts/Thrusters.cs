@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(PoweredSystem))]
 public class Thrusters : MonoBehaviour {
 
-    public float thrusterVolocity = 5;
+    public float thrusterScalar = 2;
     PoweredSystem system;
     private void Start()
     {
@@ -16,7 +16,7 @@ public class Thrusters : MonoBehaviour {
     {
         if (isPowered)
         {
-            ShipStats.Instance.velocity += thrusterVolocity;
+            ShipStats.Instance.velocity *= thrusterScalar;
         } else
         {
             ShipStats.Instance.resetVelocity();
