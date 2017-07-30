@@ -73,6 +73,12 @@ public class AsteroidBehaviour : MonoBehaviour {
             ShipStats.Instance.GetDamage(1);
             Destroy(this.gameObject);
         }
+
+        if (collision.gameObject.tag.Contains("Bullet"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+        }
     }
 
     void OnDestroy()
