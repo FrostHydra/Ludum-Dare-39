@@ -99,9 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26dbe94f0554bd14db61985cf65d9c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationspeed: 70
-  widthThresold: {x: 0, y: 9999}
-  heightThresold: {x: 0, y: 9999}
+  minRotationSpeed: -80
+  maxRotationSpeed: 80
+  deathParticles: {fileID: 1712325059102184, guid: 303ad666946cf9d44970d6930ceacb82,
+    type: 2}
 --- !u!212 &212268639076718090
 SpriteRenderer:
   m_ObjectHideFlags: 1
