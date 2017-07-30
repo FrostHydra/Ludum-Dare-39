@@ -2,21 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour {
-    
+public class Spawner : MonoBehaviour
+{
+
     public GameObject[] asteroidPrefab;
     public float spawntime;
+    public float asteroidSpeed = 5.0f;
 
-    
-	void Update ()
+
+    void Update()
     {
-        //SpawnEnemy();
+        // Asteroid event
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Spawn();
         }
-	}
-    
+    }
+
     public void Spawn()
     {
         int spawnDirection = Random.Range(0, 3);
@@ -36,14 +38,13 @@ public class Spawner : MonoBehaviour {
                 spawnLocation = new Vector3(Random.Range(0.0f, 1.0f), 0.0f, -Camera.main.transform.position.z);
                 break;
         }
-        GameObject asteroid = Instantiate(asteroidPrefab[Random.Range(0,asteroidPrefab.Length)], Camera.main.ViewportToWorldPoint(spawnLocation), this.transform.rotation);
+        GameObject asteroid = Instantiate(asteroidPrefab[Random.Range(0, asteroidPrefab.Length)], Camera.main.ViewportToWorldPoint(spawnLocation), this.transform.rotation);
 
         Vector2 velocity = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, -Camera.main.transform.position.z)) - asteroid.transform.position;
-        velocity = velocity.normalized * 5.0f;
-            //new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
+        velocity = velocity.normalized * asteroidSpeed;
 
         asteroid.GetComponent<Rigidbody2D>().velocity = velocity;
 
-       
-    }
 
+    }
+}
