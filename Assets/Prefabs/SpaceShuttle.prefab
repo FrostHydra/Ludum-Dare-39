@@ -644,7 +644,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588144dafb4442849a00369db49394d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrusterScalar: 2
+  acceleration: 100000
+  shipFire: {fileID: 1495311869810900}
 --- !u!114 &114178214104381624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -796,8 +797,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
-  velocity: 5
-  baseVelocity: 5
+  velocity: 0
+  maximumVelocity: 500000
 --- !u!212 &212287885587635010
 SpriteRenderer:
   m_ObjectHideFlags: 1

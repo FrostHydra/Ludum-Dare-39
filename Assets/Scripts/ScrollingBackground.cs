@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class ScrollingBackground : MonoBehaviour {
 
-    public float scrollSpeedScalar = 0.05F;
+    public float maxScrollSpeed = 0.4F;
+    private float scalar;
     float offset = 0;
     Renderer rend;
-    void Start()
+
+    void Awake()
     {
         rend = GetComponent<Renderer>();
+        scalar = maxScrollSpeed / ShipStats.Instance.maximumVelocity;
     }
     void Update()
     {
-        offset += Time.deltaTime * scrollSpeedScalar * ShipStats.Instance.velocity;
+        offset += Time.deltaTime * scalar * ShipStats.Instance.velocity;
         rend.material.SetTextureOffset("_MainTex", new Vector2(0, offset));
     }
 }

@@ -6,22 +6,20 @@ public class ShipStats : GenericSingletonClass<ShipStats>
 {
 
     public int health = 10;
-    public float velocity = 5;
-    [SerializeField]
-    private float baseVelocity = 5;
 
-    private void Start()
-    {
-        resetVelocity();
-    }
 
-    public void resetVelocity()
+    public float velocity = 0;
+    public float maximumVelocity = 1000000;
+
+
+    private void Update()
     {
-        velocity = baseVelocity;
+        if (velocity > maximumVelocity) velocity = maximumVelocity;
     }
 
     public void GetDamage(int damage)
     {
+        velocity /= 2;
         health -= damage;
     }
 
