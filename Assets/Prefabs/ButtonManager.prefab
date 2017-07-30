@@ -72,12 +72,13 @@ MonoBehaviour:
   buttonLayout: {fileID: 11400000, guid: 8045e9eca10cb254a95707c333e6d5a0, type: 2}
   systemButtons:
   - name: Thrusters
-    shipSystem: {fileID: 0}
+    shipSystem: {fileID: 114760630814959228, guid: 41a2d673fec7ec3478d3955dd76c8437,
+      type: 2}
   - name: Weapon2
     shipSystem: {fileID: 0}
   - name: Weapon1
     shipSystem: {fileID: 0}
-  - name: d
+  - name: Shield
     shipSystem: {fileID: 0}
   - name: e
     shipSystem: {fileID: 0}
