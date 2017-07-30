@@ -73,9 +73,9 @@ MonoBehaviour:
   systemButtons:
   - name: Thrusters
     shipSystem: {fileID: 0}
-  - name: b
+  - name: Weapon2
     shipSystem: {fileID: 0}
-  - name: c
+  - name: Weapon1
     shipSystem: {fileID: 0}
   - name: d
     shipSystem: {fileID: 0}
