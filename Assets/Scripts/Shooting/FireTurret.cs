@@ -24,7 +24,11 @@ public class FireTurret : MonoBehaviour {
             newProjectile = Instantiate(projectile, bulletPosition.position, bulletPosition.rotation) as GameObject;
 
             // create code here that animates the newProjectile
-
+            if(this.gameObject.GetComponent<AudioSource>() != null)
+            {
+                this.gameObject.GetComponent<AudioSource>().Play();
+            }
+            
             nextFire = nextFire - myTime;
             myTime = 0.0F;
         }

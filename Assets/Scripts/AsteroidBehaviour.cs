@@ -70,19 +70,16 @@ public class AsteroidBehaviour : MonoBehaviour {
     {
         if (collision.gameObject.name.Contains("SpaceShuttle"))
         {
+            Instantiate(deathParticles, this.transform.position, this.transform.rotation);
             ShipStats.Instance.GetDamage(1);
             Destroy(this.gameObject);
         }
 
-        if (collision.gameObject.tag.Contains("Bullet"))
+        if (collision.gameObject.name.Contains("Bullet"))
         {
+            Instantiate(deathParticles, this.transform.position, this.transform.rotation);
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
         }
-    }
-
-    void OnDestroy()
-    {
-        Instantiate(deathParticles,this.transform.position,this.transform.rotation);
     }
 }

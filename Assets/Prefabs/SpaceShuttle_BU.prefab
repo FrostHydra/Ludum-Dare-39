@@ -475,6 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a0afa9480ee5f43b7160e9c8acd421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 0.2
   depth: 0
   minAngle: 90
   maxAngle: -120
@@ -489,6 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a5f0e9faa49af4a977e0aa62a65098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 10
   velocity: 5
   baseVelocity: 5
 --- !u!114 &114246748430859176
@@ -564,6 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a0afa9480ee5f43b7160e9c8acd421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 0.2
   depth: 0
   minAngle: -70
   maxAngle: 90
