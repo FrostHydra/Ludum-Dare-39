@@ -3,45 +3,47 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour {
-
-    public Transform[] spawnLocations;
-    public GameObject[] spawnPrefab;
-    public GameObject[] spawnClone;
+    
+    public GameObject[] asteroidPrefab;
     public float spawntime;
 
-
-	// Use this for initialization
-	void Start ()
-    {
-
-	}
-	
-	// Update is called once per frame
+    
 	void Update ()
     {
-        SpawnEnemy();
+        //SpawnEnemy();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Spawn();
+        }
 	}
-
-
-    public void SpawnEnemy()
+    
+    public void Spawn()
     {
+        int spawnDirection = Random.Range(0, 3);
+        Vector3 spawnLocation = new Vector3(10, 0, 0);
+        switch (spawnDirection)
+        {
+            case 0:
+                spawnLocation = new Vector3(0.0f, Random.Range(0.0f, 1.0f), -Camera.main.transform.position.z);
+                break;
+            case 1:
+                spawnLocation = new Vector3(1.0f, Random.Range(0.0f, 1.0f), -Camera.main.transform.position.z);
+                break;
+            case 2:
+                spawnLocation = new Vector3(Random.Range(0.0f, 1.0f), 1.0f, -Camera.main.transform.position.z);
+                break;
+            case 3:
+                spawnLocation = new Vector3(Random.Range(0.0f, 1.0f), 0.0f, -Camera.main.transform.position.z);
+                break;
+        }
+        GameObject asteroid = Instantiate(asteroidPrefab[Random.Range(0,asteroidPrefab.Length)], Camera.main.ViewportToWorldPoint(spawnLocation), this.transform.rotation);
 
-        spawnClone[0] = Instantiate(spawnPrefab[Random.Range(0, 4)], spawnLocations[Random.Range(0,4)].transform.position, Quaternion.identity) as GameObject;
+        Vector2 velocity = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, -Camera.main.transform.position.z)) - asteroid.transform.position;
+        velocity = velocity.normalized * 5.0f;
+            //new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
 
-        
+        asteroid.GetComponent<Rigidbody2D>().velocity = velocity;
 
+       
     }
-}
-
-
-        //int spawnType = Random.Range(0, 3);
-        //int spawnDirection = Random.Range(0, 5);
-
-        //Vector2 spawnPosition = new Vector2(Random.Range(-spawnValue.x, spawnValue.x), spawnValue.y);
-        //print(spawnPosition);
-        //Instantiate(asteroids[spawnType], spawnPosition, Quaternion.identity
-
-        //GameObject newAsteroid = (gameObject)Instantiate(asteroids[randomNumber], spawnLocation);
-
-        //asteroids = asteroids[Random.Range(0, asteroids.Length)];
 
