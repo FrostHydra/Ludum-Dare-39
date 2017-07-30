@@ -3,8 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AsteroidBehaviour : MonoBehaviour {
-    
-    public float rotationspeed;
+
+    public float minRotationSpeed = -80;
+    public float maxRotationSpeed =  80;
+
+    private float rotationspeed;
+
+    public GameObject deathParticles;
+
+    void Start()
+    {
+        rotationspeed = Random.Range(minRotationSpeed, maxRotationSpeed);
+    }
     
     void Update () {
         transform.Rotate(new Vector3(0, 0, Time.deltaTime * rotationspeed));
@@ -54,5 +64,19 @@ public class AsteroidBehaviour : MonoBehaviour {
                 cam.WorldToScreenPoint(ren.bounds.min);
         }
         return sdim;
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name.Contains("SpaceShuttle"))
+        {
+            ShipStats.Instance.GetDamage(1);
+            Destroy(this.gameObject);
+        }
+    }
+
+    void OnDestroy()
+    {
+        Instantiate(deathParticles,this.transform.position,this.transform.rotation);
     }
 }

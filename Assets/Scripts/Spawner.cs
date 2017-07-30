@@ -16,8 +16,13 @@ public class Spawner : MonoBehaviour
         // Asteroid event
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Spawn();
+            AsteroidEvent(5, 5);
         }
+    }
+
+    public void AsteroidEvent(int spawnNumber, float totalDuration)
+    {
+        StartCoroutine(SpawnDelay(totalDuration/spawnNumber, spawnNumber));
     }
 
     public void Spawn()
@@ -47,5 +52,15 @@ public class Spawner : MonoBehaviour
         asteroid.GetComponent<Rigidbody2D>().velocity = velocity;
 
 
+    }
+
+    IEnumerator SpawnDelay(float delay, int times)
+    {
+        Spawn();
+        yield return new WaitForSeconds(delay);
+        if (times > 0)
+        {
+            StartCoroutine(SpawnDelay(delay,times-1));
+        }
     }
 }
