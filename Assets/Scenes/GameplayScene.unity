@@ -692,6 +692,31 @@ Prefab:
       propertyPath: distance
       value: 54600000
       objectReference: {fileID: 0}
+    - target: {fileID: 114764421966893180, guid: a721ce740bd456642ba75b742e8cffe8,
+        type: 2}
+      propertyPath: systemButtons.Array.data[0].buttonID
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 114764421966893180, guid: a721ce740bd456642ba75b742e8cffe8,
+        type: 2}
+      propertyPath: systemButtons.Array.data[1].buttonID
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114764421966893180, guid: a721ce740bd456642ba75b742e8cffe8,
+        type: 2}
+      propertyPath: systemButtons.Array.data[2].buttonID
+      value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 114764421966893180, guid: a721ce740bd456642ba75b742e8cffe8,
+        type: 2}
+      propertyPath: systemButtons.Array.data[3].buttonID
+      value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 114764421966893180, guid: a721ce740bd456642ba75b742e8cffe8,
+        type: 2}
+      propertyPath: systemButtons.Array.data[4].buttonID
+      value: 53
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a721ce740bd456642ba75b742e8cffe8, type: 2}
   m_IsPrefabParent: 0

@@ -9,6 +9,9 @@ public class SystemButton
     public string name;
     //public bool isPowered;
     public PoweredSystem shipSystem;
+    public char buttonID;
+    [HideInInspector]
+    public KeyCode keyCode;
 
 }
 
@@ -25,6 +28,7 @@ public class DrawButtons : MonoBehaviour {
         for (int i = 0; i < systemButtons.Length; i++)
         {
             systemButtons[i].shipSystem.setPowered(false);
+            systemButtons[i].keyCode = (KeyCode)systemButtons[i].buttonID.GetHashCode();
         }
 	}
 
@@ -52,6 +56,12 @@ public class DrawButtons : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		
+		for(int i = 0; i < systemButtons.Length; i++)
+        {
+            if (Input.GetKeyDown(systemButtons[i].keyCode))
+            {
+                systemButtons[i].shipSystem.setPowered(!systemButtons[i].shipSystem.IsPowered);
+            }
+        }
 	}
 }
