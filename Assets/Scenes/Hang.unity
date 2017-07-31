@@ -1019,6 +1019,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2077305101}
   - component: {fileID: 2077305100}
+  - component: {fileID: 2077305102}
+  - component: {fileID: 2077305103}
   m_Layer: 0
   m_Name: mars
   m_TagString: Untagged
@@ -1075,9 +1077,34 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2077305099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.94, y: 5.04, z: 0}
+  m_LocalPosition: {x: 3.94, y: 2.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2077305102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2077305099}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 267cbed98ddfcb945819c585679eb2b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeSpeed: 0.4
+  colorB: {r: 0, g: 0, b: 0, a: 0}
+  colorE: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2077305103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2077305099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efbe704a8d8b1554f8dd1e0fc942da94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
