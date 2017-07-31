@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShieldSystem : MonoBehaviour {
-
+public class ShieldSystem : MonoBehaviour
+{
+    public float drainOnHit = 10;
     private Renderer rend;
     private Collider2D coll;
 
@@ -21,5 +22,13 @@ public class ShieldSystem : MonoBehaviour {
     {
         rend.enabled = isPowered;
         coll.enabled = isPowered;
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Contains("Hazard"))
+        {
+            Battery.Instance.drainPower(drainOnHit);
+        }
     }
 }
