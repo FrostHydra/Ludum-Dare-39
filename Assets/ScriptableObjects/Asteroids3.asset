@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Asteroids3
   m_EditorClassIdentifier: 
   triggerDistance: 24600000
-  asteroidAmount: 10
+  asteroidAmount: 2
   spawnDelay: 0.2
