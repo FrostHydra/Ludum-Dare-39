@@ -35,7 +35,7 @@ public class GetStats : MonoBehaviour {
 
         if(distanceObj != null)
         {
-            distance = (distanceScript.GetMaxDistance() - distanceScript.GetDistanceLeft()).ToString("0") + " λ reached";
+            distance = (distanceScript.GetMaxDistance() - distanceScript.GetDistanceLeft()).ToString("0") + " distance reached";
         }
         else
         {

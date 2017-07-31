@@ -14,6 +14,6 @@ public class DrawSpeed : MonoBehaviour {
 
     public void OnGUI()
     {
-        GUI.TextField(new Rect(Screen.width / 50, Screen.height / 50, Screen.width / 5, Screen.height / 10), speed.ToString("0") + " λ/s", buttonLayout.customStyles[3]);
+        GUI.TextField(new Rect(Screen.width / 50, Screen.height / 50, Screen.width / 5, Screen.height / 10), speed.ToString("0") + " distance / s", buttonLayout.customStyles[3]);
     }
 }
