@@ -6,7 +6,8 @@ using UnityEngine;
 public class Thrusters : MonoBehaviour {
 
     //public float thrusterScalar = 2;
-    public float acceleration =     10000;
+    public float accelConstant =     10000;
+    public float accelScale;
     public float deacceleration = 50000;
 
     public GameObject shipFire;
@@ -23,7 +24,8 @@ public class Thrusters : MonoBehaviour {
 
         if (system.IsPowered)
         {
-            ShipStats.Instance.velocity += acceleration * Time.deltaTime;
+            ShipStats.Instance.velocity += accelConstant;
+            ShipStats.Instance.velocity *= accelScale;
         } else
         {
             ShipStats.Instance.velocity -= deacceleration * Time.deltaTime;

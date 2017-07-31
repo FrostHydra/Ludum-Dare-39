@@ -645,7 +645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588144dafb4442849a00369db49394d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 100000
+  accelConstant: 10
+  accelScale: 1.01
   deacceleration: 20000
   shipFire: {fileID: 1495311869810900}
 --- !u!114 &114174150279570002
@@ -659,8 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f01d322724f94e41aa6888d8b426f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.4
-  distance: 2
+  distance: 0.5
 --- !u!114 &114178214104381624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -710,6 +710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e58c6964ba24a4b8e4b2a1340d4596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drainOnHit: 10
 --- !u!114 &114563926805743026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -800,6 +801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingPower: 100
   powerRemaining: 0
+  isGameOver: 0
 --- !u!114 &114882930216765452
 MonoBehaviour:
   m_ObjectHideFlags: 1
