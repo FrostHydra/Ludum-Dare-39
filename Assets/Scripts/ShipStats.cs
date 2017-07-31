@@ -15,6 +15,7 @@ public class ShipStats : GenericSingletonClass<ShipStats>
     private void Update()
     {
         if (velocity > maximumVelocity) velocity = maximumVelocity;
+        if (velocity < 0) velocity = 0;
     }
 
     public void GetDamage(int damage)

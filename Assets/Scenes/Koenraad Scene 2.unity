@@ -238,11 +238,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.00000071525574, y: 0}
   m_SizeDelta: {x: -10.000002, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &182043178 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1495311869810900, guid: 41a2d673fec7ec3478d3955dd76c8437,
-    type: 2}
-  m_PrefabInternal: {fileID: 613282597}
 --- !u!114 &268464371 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114178214104381624, guid: 41a2d673fec7ec3478d3955dd76c8437,
@@ -410,31 +405,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114882930216765452, guid: 41a2d673fec7ec3478d3955dd76c8437,
-        type: 2}
-      propertyPath: baseVelocity
-      value: 500000
-      objectReference: {fileID: 0}
-    - target: {fileID: 114882930216765452, guid: 41a2d673fec7ec3478d3955dd76c8437,
-        type: 2}
-      propertyPath: velocity
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 114137012987766308, guid: 41a2d673fec7ec3478d3955dd76c8437,
         type: 2}
-      propertyPath: acceleration
-      value: 100000
+      propertyPath: deacceleration
+      value: 20000
       objectReference: {fileID: 0}
-    - target: {fileID: 114882930216765452, guid: 41a2d673fec7ec3478d3955dd76c8437,
-        type: 2}
-      propertyPath: maximumVelocity
-      value: 500000
-      objectReference: {fileID: 0}
-    - target: {fileID: 114137012987766308, guid: 41a2d673fec7ec3478d3955dd76c8437,
-        type: 2}
-      propertyPath: shipFire
-      value: 
-      objectReference: {fileID: 182043178}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 41a2d673fec7ec3478d3955dd76c8437, type: 2}
   m_IsPrefabParent: 0
