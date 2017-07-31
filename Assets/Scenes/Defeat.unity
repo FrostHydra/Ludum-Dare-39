@@ -248,6 +248,7 @@ GameObject:
   - component: {fileID: 357056917}
   - component: {fileID: 357056916}
   - component: {fileID: 357056915}
+  - component: {fileID: 357056918}
   m_Layer: 5
   m_Name: Asteroid_1
   m_TagString: Untagged
@@ -266,7 +267,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1887523266}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 32}
   m_AnchorMin: {x: 0.14665624, y: 0.6892222}
   m_AnchorMax: {x: 0.22421876, y: 0.8305557}
@@ -317,6 +318,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 357056913}
+--- !u!114 &357056918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 357056913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1254083943, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 0.97562826
 --- !u!1 &380676625
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +359,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1887523266}
-  m_RootOrder: 3
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.0274375, y: 0.24455558}
   m_AnchorMax: {x: 0.9833126, y: 0.97377783}
@@ -453,7 +467,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1887523266}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &568095949
 GameObject:
@@ -466,6 +480,7 @@ GameObject:
   - component: {fileID: 568095953}
   - component: {fileID: 568095952}
   - component: {fileID: 568095951}
+  - component: {fileID: 568095954}
   m_Layer: 5
   m_Name: Asteroid_2
   m_TagString: Untagged
@@ -484,7 +499,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1887523266}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 18}
   m_AnchorMin: {x: 0.69734377, y: 0.81977785}
   m_AnchorMax: {x: 0.73978126, y: 0.8946111}
@@ -535,6 +550,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 568095949}
+--- !u!114 &568095954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 568095949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1254083943, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1.0081675
 --- !u!1 &792976998
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,6 +654,7 @@ GameObject:
   - component: {fileID: 1168988151}
   - component: {fileID: 1168988150}
   - component: {fileID: 1168988149}
+  - component: {fileID: 1168988152}
   m_Layer: 5
   m_Name: Asteroid_4
   m_TagString: Untagged
@@ -644,7 +673,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1887523266}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 122}
   m_AnchorMin: {x: 0.26612496, y: 0.25011113}
   m_AnchorMax: {x: 0.30843753, y: 0.32077777}
@@ -695,6 +724,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1168988147}
+--- !u!114 &1168988152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1168988147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1254083943, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1.0644678
 --- !u!1 &1303323126
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,6 +748,7 @@ GameObject:
   - component: {fileID: 1303323130}
   - component: {fileID: 1303323129}
   - component: {fileID: 1303323128}
+  - component: {fileID: 1303323131}
   m_Layer: 5
   m_Name: Asteroid_5
   m_TagString: Untagged
@@ -724,7 +767,7 @@ RectTransform:
   m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
   m_Children: []
   m_Father: {fileID: 1887523266}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 191}
   m_AnchorMin: {x: 0.8791562, y: 0.6127223}
   m_AnchorMax: {x: 0.9737813, y: 0.7782222}
@@ -775,6 +818,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1303323126}
+--- !u!114 &1303323131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1303323126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1254083943, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1.0164497
 --- !u!1 &1340202128
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,6 +963,7 @@ GameObject:
   - component: {fileID: 1489441611}
   - component: {fileID: 1489441610}
   - component: {fileID: 1489441609}
+  - component: {fileID: 1489441612}
   m_Layer: 5
   m_Name: Asteroid_3
   m_TagString: Untagged
@@ -925,7 +982,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1887523266}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 76}
   m_AnchorMin: {x: 0.7035625, y: 0.15022223}
   m_AnchorMax: {x: 0.7837813, y: 0.28877777}
@@ -976,6 +1033,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1489441607}
+--- !u!114 &1489441612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1489441607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1254083943, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1.0292709
 --- !u!1 &1846738444
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,6 +1057,7 @@ GameObject:
   - component: {fileID: 1846738448}
   - component: {fileID: 1846738447}
   - component: {fileID: 1846738446}
+  - component: {fileID: 1846738449}
   m_Layer: 5
   m_Name: Asteroid_6
   m_TagString: Untagged
@@ -1005,7 +1076,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1887523266}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 12}
   m_AnchorMin: {x: 0.32887506, y: 0.49022228}
   m_AnchorMax: {x: 0.3965625, y: 0.6057778}
@@ -1056,6 +1127,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1846738444}
+--- !u!114 &1846738449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1846738444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1254083943, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1.0413455
 --- !u!1 &1887523262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,7 +1228,6 @@ RectTransform:
   - {fileID: 2025021130}
   - {fileID: 792976999}
   - {fileID: 1340202129}
-  - {fileID: 380676626}
   - {fileID: 538974585}
   - {fileID: 357056914}
   - {fileID: 568095950}
@@ -1152,6 +1235,7 @@ RectTransform:
   - {fileID: 1168988148}
   - {fileID: 1303323127}
   - {fileID: 1846738445}
+  - {fileID: 380676626}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
