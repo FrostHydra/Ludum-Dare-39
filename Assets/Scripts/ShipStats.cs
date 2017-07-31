@@ -12,7 +12,7 @@ public class ShipStats : GenericSingletonClass<ShipStats>
     public float maximumVelocity = 1000000;
 
 
-    private void Update()
+    private void LateUpdate()
     {
         if (velocity > maximumVelocity) velocity = maximumVelocity;
         if (velocity < 0) velocity = 0;
