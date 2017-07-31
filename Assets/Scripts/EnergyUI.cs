@@ -6,6 +6,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Slider))]
 public class EnergyUI : MonoBehaviour {
 
+    public Image fill;
+
     Slider powerSlider;
     Battery battery;
     private float maxPower;
@@ -21,5 +23,7 @@ public class EnergyUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         powerSlider.value = battery.powerRemaining / maxPower;
+
+        fill.color = Color.Lerp(Color.white, Color.red, 1 - powerSlider.value);
 	}
 }
