@@ -9,6 +9,8 @@ public class Battery : GenericSingletonClass<Battery> {
     [HideInInspector]
     public float powerRemaining;
 
+    public bool isGameOver;
+
     private void Start()
     {
         powerRemaining = startingPower;
@@ -26,6 +28,13 @@ public class Battery : GenericSingletonClass<Battery> {
         {
             powerRemaining = 0;
             // gameover
+
+            if (!isGameOver)
+            {
+                isGameOver = true;
+                FindObjectOfType<SceneSwitch>().LoadScene("Defeat");
+
+            }
         }
     }
 }

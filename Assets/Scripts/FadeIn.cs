@@ -4,21 +4,31 @@ using UnityEngine;
 
 public class FadeIn : MonoBehaviour {
 
-
-    public float fadeSpeed;
+    public float startingDistance = 1000000;
+    
     public Color colorB;
     public Color colorE;
+
+    private DistanceScript distance;
+    private float lerpValue = 0;
 
 
     private void Awake()
     {
+        distance = FindObjectOfType<DistanceScript>();
+
         colorB = GetComponent<SpriteRenderer>().color;
         colorE = new Color(colorB.r, colorB.g, colorB.b, 0f);
     }
 
 	void Update () {
-        fadeSpeed += Time.deltaTime;
-        GetComponent<SpriteRenderer>().color = Color.Lerp(colorE, colorB, fadeSpeed * 0.1f);
+
+        if (distance.distance < startingDistance)
+        {
+            lerpValue = 1 - (distance.distance / startingDistance);
+        }
+        
+        GetComponent<SpriteRenderer>().color = Color.Lerp(colorE, colorB, lerpValue);
         
 	}
 }

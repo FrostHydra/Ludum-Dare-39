@@ -38,6 +38,7 @@ public class DistanceScript : MonoBehaviour {
     public void Victory()
     {
         //Do Something
+        FindObjectOfType<SceneSwitch>().LoadScene("Victory");
     }
 
     public void StopMovement()
