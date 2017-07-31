@@ -19,9 +19,6 @@ public class FadeIn : MonoBehaviour {
 	void Update () {
         fadeSpeed += Time.deltaTime;
         GetComponent<SpriteRenderer>().color = Color.Lerp(colorE, colorB, fadeSpeed * 0.1f);
-        if(fadeSpeed == 30)
-        {
-            fadeSpeed = 30;
-        }
+        
 	}
 }
