@@ -5,17 +5,18 @@ using UnityEngine;
 public class SpaceshipMovement : MonoBehaviour {
 
     private float posX;
-    public float speed;
     public float distance;
     private float sinNr = 0;
 
     void Start()
     {
-        posX = this.gameObject.transform.position.y;
+        posX = this.gameObject.transform.position.x;
     }
 
-    void Update () {
-        float newPosX = posX + (distance * Mathf.Sin(speed * Time.time));
+    void Update() {
+        sinNr += (ShipStats.Instance.velocity / 500000) * Time.deltaTime;
+        float newPosX = posX + (distance * Mathf.Sin(sinNr));
         this.transform.position = new Vector3(newPosX, this.transform.position.y, this.transform.position.z);
+       
 	}
 }

@@ -58,4 +58,7 @@ MonoBehaviour:
   - {fileID: 1085917659284550, guid: 136ccb329888ba549ab60864440cab5e, type: 2}
   asteroidSpeed: 5
   events:
-  - {fileID: 11400000, guid: bdcfc4d673fd5534c840d9f4b1828766, type: 2}
+  - {fileID: 11400000, guid: e87abc2d068a6ff48913154e82a7fbc2, type: 2}
+  - {fileID: 11400000, guid: 3ccbfd1a756484b47ae1bdb723b4d1d7, type: 2}
+  - {fileID: 11400000, guid: 4ec59b84789502049b877b5fd7f66ff3, type: 2}
+  - {fileID: 11400000, guid: 8406f80c9a92e104ca80b5a6e43fa2ae, type: 2}
