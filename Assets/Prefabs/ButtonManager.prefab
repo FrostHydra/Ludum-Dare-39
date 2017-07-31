@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4584499149349298}
   - component: {fileID: 114764421966893180}
   - component: {fileID: 114674981076196042}
+  - component: {fileID: 114106715661501092}
+  - component: {fileID: 114512154599282376}
   m_Layer: 0
   m_Name: ButtonManager
   m_TagString: Untagged
@@ -41,6 +43,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114106715661501092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1122906865854724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ba2f5c00aadb048876a73e4d76d15d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonLayout: {fileID: 11400000, guid: 8045e9eca10cb254a95707c333e6d5a0, type: 2}
+--- !u!114 &114512154599282376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1122906865854724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ba2f5c00aadb048876a73e4d76d15d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonLayout: {fileID: 11400000, guid: 8045e9eca10cb254a95707c333e6d5a0, type: 2}
 --- !u!114 &114674981076196042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5904f2801fafe924eac3fe414600e930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 100
+  distance: 54600000
   isMoving: 1
   buttonLayout: {fileID: 11400000, guid: 8045e9eca10cb254a95707c333e6d5a0, type: 2}
   arrowTexture: {fileID: 2800000, guid: 4316bf967bc52f846b45d99753e5c72d, type: 3}
@@ -72,13 +98,18 @@ MonoBehaviour:
   buttonLayout: {fileID: 11400000, guid: 8045e9eca10cb254a95707c333e6d5a0, type: 2}
   systemButtons:
   - name: Thrusters
-    shipSystem: {fileID: 114760630814959228, guid: 41a2d673fec7ec3478d3955dd76c8437,
-      type: 2}
-  - name: Weapon2
     shipSystem: {fileID: 0}
-  - name: Weapon1
+    buttonID: 49
+    keyCode: 0
+  - name: Left Gun
     shipSystem: {fileID: 0}
+    buttonID: 50
+    keyCode: 0
+  - name: Right Gun
+    shipSystem: {fileID: 0}
+    buttonID: 51
+    keyCode: 0
   - name: Shield
     shipSystem: {fileID: 0}
-  - name: e
-    shipSystem: {fileID: 0}
+    buttonID: 52
+    keyCode: 0

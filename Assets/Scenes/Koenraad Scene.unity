@@ -198,7 +198,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.494
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -631,23 +631,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1121777737 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1122906865854724, guid: a721ce740bd456642ba75b742e8cffe8,
-    type: 2}
-  m_PrefabInternal: {fileID: 1151746615}
---- !u!114 &1121777738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1121777737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36ba2f5c00aadb048876a73e4d76d15d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonLayout: {fileID: 11400000, guid: 8045e9eca10cb254a95707c333e6d5a0, type: 2}
 --- !u!1001 &1147526528
 Prefab:
   m_ObjectHideFlags: 0
@@ -749,16 +732,6 @@ Prefab:
       propertyPath: systemButtons.Array.data[3].shipSystem
       value: 
       objectReference: {fileID: 268464371}
-    - target: {fileID: 114764421966893180, guid: a721ce740bd456642ba75b742e8cffe8,
-        type: 2}
-      propertyPath: systemButtons.Array.data[4].shipSystem
-      value: 
-      objectReference: {fileID: 1350202500}
-    - target: {fileID: 114674981076196042, guid: a721ce740bd456642ba75b742e8cffe8,
-        type: 2}
-      propertyPath: distance
-      value: 54600000
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a721ce740bd456642ba75b742e8cffe8, type: 2}
   m_IsPrefabParent: 0
@@ -830,12 +803,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1161257138}
---- !u!114 &1350202500 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114563926805743026, guid: 41a2d673fec7ec3478d3955dd76c8437,
-    type: 2}
-  m_PrefabInternal: {fileID: 613282597}
-  m_Script: {fileID: 11500000, guid: f4e3dd489826a594bbc1b8f636022669, type: 3}
 --- !u!114 &1500609182 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114729144869602312, guid: 41a2d673fec7ec3478d3955dd76c8437,
