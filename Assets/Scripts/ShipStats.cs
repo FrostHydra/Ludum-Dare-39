@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShipStats : GenericSingletonClass<ShipStats>
 {
 
-    public int health = 10;
+    public float energyLossOnHit = 10;
 
 
     public float velocity = 0;
@@ -21,12 +21,13 @@ public class ShipStats : GenericSingletonClass<ShipStats>
     public void GetDamage(int damage)
     {
         velocity /= 2;
-        health -= damage;
+        Battery.Instance.drainPower(energyLossOnHit);
+        //health -= damage;
     }
 
     public void Heal(int heal)
     {
-        health += heal;
+        //health += heal;
     }
 
     public float GetVelocity()
