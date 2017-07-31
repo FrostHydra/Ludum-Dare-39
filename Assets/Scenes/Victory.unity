@@ -247,6 +247,7 @@ GameObject:
   - component: {fileID: 380676626}
   - component: {fileID: 380676628}
   - component: {fileID: 380676627}
+  - component: {fileID: 380676629}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -306,13 +307,27 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '<color=#FAFA5A>Victory</color><size=40>
 
-    <color=#EDFF80>You reached mars</color></size>'
+    <color=#EDFF80>You reached mars</color></size>
+
+'
 --- !u!222 &380676628
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 380676625}
+--- !u!114 &380676629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 380676625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda8d52ac1695214f8fd20909e14a2e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  victoryScreen: 1
 --- !u!1 &538974582
 GameObject:
   m_ObjectHideFlags: 0

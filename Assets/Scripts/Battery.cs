@@ -37,4 +37,14 @@ public class Battery : GenericSingletonClass<Battery> {
             }
         }
     }
+
+    public float GetPower()
+    {
+        return powerRemaining;
+    }
+
+    public float GetMaxPower()
+    {
+        return startingPower;
+    }
 }
